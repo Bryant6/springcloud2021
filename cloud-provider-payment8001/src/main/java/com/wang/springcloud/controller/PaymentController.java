@@ -19,8 +19,8 @@ public class PaymentController {
     @Resource
     private PaymentService paymentService;
 
-    @GetMapping(value = "/payment/create")
-    public CommonResult create(Payment payment){
+    @PostMapping(value = "/payment/create")
+    public CommonResult create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
 
         Logger logger = LoggerFactory.getLogger(PaymentController.class);
