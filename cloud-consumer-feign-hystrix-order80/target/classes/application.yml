@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka
+
+
+#ribbon:
+#  ReadTimeout: 5000
+#  ConnectTimeout: 5000
+#
+#logging:
+#  level:
+#    # feign日志以什么级别监控哪个接口
+feign:
+  hystrix:
+    enabled: true
+#    com.wang.springcloud.service.PaymentFeignService: debug
